@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+        
+        <div class="selection-container">
+            <div class="custom-dropdown">
+                <div class="dropdown-selected" id="mode-selected">
+                    <i class="fas fa-gamepad select-icon"></i>
+                    <span>VS Computer</span>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <div class="dropdown-options" id="mode-options">
+                    <div class="dropdown-option" data-value="vsComputer">VS Computer</div>
+                    <div class="dropdown-option" data-value="twoPlayer">VS Human</div>
+                </div>
+            </div>
+
+            
+            <div class="custom-dropdown" id="difficulty-dropdown">
+                <div class="dropdown-selected" id="difficulty-selected">
+                    <i class="fas fa-cog select-icon"></i>
+                    <span>Hard</span>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <div class="dropdown-options" id="difficulty-options">
+                    <div class="dropdown-option" data-value="easy">Easy</div>
+                    <div class="dropdown-option" data-value="medium">Medium</div>
+                    <div class="dropdown-option" data-value="hard">Hard</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="score-container">
+            <div class="score-item">
+                <div class="score-label">Player X</div>
+                <div class="score-value" id="playerX-score">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Draws</div>
+                <div class="score-value" id="draw-score">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Player O</div>
+                <div class="score-value" id="playerO-score">0</div>
+            </div>
+        </div>
+
+        <div id="game-board" class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div id="game-status">Player X's Turn</div>
+
+        <div class="button-container">
+            <button id="restart-btn">Restart Game</button>
+            <button id="new-game-btn">New Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
